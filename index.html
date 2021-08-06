@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- *Datos* -->
+    <title> Survey Form: Resgistration For the Covid-19 Vaccination</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página formulario de encuesta">
+    <meta name="author" content="Tobias Facello">
+    <meta name="keywords" content="Survey form, Desarrollo Web, Front-End Developer, Proyectos">
+<!-- *Estilos* -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d70a1f20c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="content-container">
+            <header>
+                <h1 id="title">form for the registration process of covid-19</h1>
+                <div>
+                    <p id="description">Complete the form and register your consultation to receive the vaccine for COVID-19.</p>
+                    <p>INDIA uses this system to register citizens.</p>
+                </div>
+        </header>
+            <main>
+                <div class="form-container">
+                    <form id="survey-form">
+                        <div class="form-group container-datos">
+                            <h2>Personal information</h2>
+                            <br>
+                            <label id="name-label" for="name">Name * </label>
+                            <input class="form__input" type="text" id="name" placeholder="Enter your name" required>
+                            <br>
+    
+                            <label for="last-name"> Last Name * </label>
+                            <input class="form__input" type="text" id="last-name" placeholder="Enter your Last Name" required>
+                            <br>
+                            
+                            <label id="number-label" for="age">Age * </label>
+                            <input class="form__input" type="number" id="age" placeholder="Enter your Age" required min="18" max="99">
+                            <br>
+    
+                            <label for="number">Days * </label>
+                            <input class="form__input" type='number' id="number" placeholder="Enter your Days" required min="1000000" max="50000000" pattern="[0-9]{8}">
+                        </div>
+                        <br>
+
+                        <div class="form-group container-contacto">
+                            <h2>Contact Information</h2>
+                            <br>
+                            <label for="cod-tel">Mobile NO*</label>
+                            <input class="form__input" type="tel" id="cod-tel" placeholder="Mobile Number" pattern="[0-9]{4}"><input class="form__input" type="tel" id="num-tel" placeholder="Number" pattern="[0-9]{6}">
+                            <br>                            
+                            <label id="email-label" for="email">Email * </label>
+                            <input class="form__input" type='email' id="email" placeholder="Enter your Email-ID" required pattern='[^@]+@[^@]+.[a-zA-Z]{2,6}'>
+                        </div>
+                        <br>
+
+                        <div class="form-group container-salud">
+                            <h2>Healthy Conditions</h2>
+                            <br>
+                            <h3>
+                            What population group do you belong to? *</h3>
+                            <br>
+                            <select class="salud__grupo" id="dropdown" required>
+                                <option disabled selected value>Select the appropriate option</option>
+                                <option value="personal-salud">Healthy person</option>
+                                <option value="personal-seguridad">Security personnel</option>
+                                <option value="personal-educativo">Educational staff</option>
+                                <option value="mayores">Person over 60 years old</option>
+                                <option value="riesgo">Risk person (between 18 and 59 years old)</option>
+                                <option value="sin-riesgo">Person without risk pathologies (between 18 and 59 years old)</option>
+                            </select>
+                            <br>
+
+                            <h3>Do you have any of the following risk pathologies? *</h3>
+                            <br>
+                            <div class="form-group container-patologias">
+                                <form class="salud__container-form">
+                                    <div>
+                                        <input type="checkbox" name="input-diabetes" value='diabetes'>
+                                        <label for="input-diabetes">Diabetes  2</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-obesidad" value='obesidad'>
+                                        <label for="input-obesidad">Obesity</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-vih" value='vih'>
+                                        <label for="input-vih">VIH</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-renal" value='renal'>
+                                        <label for="input-cardiovascular">Cardiovascular disease
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-respiratoria" value='respiratoria'>
+                                        <label for="input-renal">Chronic kidney disease</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-respiratoria" value='respiratoria'>
+                                        <label for="input-respiratoria">Chronic respiratory disease</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-organos" value='transp-organos'>
+                                        <label for="input-organos">Organ transplant patient</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-quimio" value='quimioterapia'>
+                                        <label for="input-quimio">Patient for chemotherapy treatment</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-discapacidad" value='discapacidad'>
+                                        <label for="input-discapacidad">Patient with a disability</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="input-activa" value='reciente-activa'>
+                                        <label for="input-activa">Patient with recent diagnosis or active disease</label>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="container-sintomas">
+                                <h3>Do you have or have you had any of the following symptoms in the last 14 days? *</h3>
+                                <br>
+                                <div class="sintomas-graves">
+                                    <h3>
+                                    Severe symptoms</h3>
+                                    <ul>
+                                        <li>Difficulty breathing or feeling short of breath</li>
+                                        <li>Chest pain or pressure</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="sintomas-habituales">
+                                    <h3>Common symptoms</h3>
+                                    <ul>
+                                        <li>Fever</li>
+                                        <li>Dry cough</li>
+                                        <li>Fatigue</li>
+                                    </ul>
+                                </div>
+
+                                <div class="sintomas-menos-comunes">
+                                    <h3>Less common symptoms</h3>
+                                    <ul>
+                                        <li>Aches and pains</li>
+                                        <li>Throat pain</li>
+                                        <li>Diarrea</li>
+                                        <li>Headache</li>
+                                        <li>Loss of smell and / or taste</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <br>
+                                
+                            <div class="form-group salud__sintomas">
+                                <h5><u>Select the appropriate option:</u></h5>
+                                <label><input name="sintomas-usuario" type="radio" value="sintomas-si">Yes</label>
+                                <label><input name="sintomas-usuario" type="radio" value="sintomas-no">No</label>
+                                <label><input name="sintomas-usuario" type="radio" value="sintomas-no-seguro">I'm not sure</label>
+                            </div>
+                            <br>
+                            <div class="container-sugerencias-sintomas">
+                                <div class="salud__sugerencias sintomas-graves">
+                                    <p>If you present<em>severe symptoms</em>, seek immediate medical attention. However, you should always call your doctor or health care center before presenting
+                                    yourself at the place in question..</p>
+                                </div>
+                                <br>
+                                <div class="salud__sugerencias sintomas-habituales">
+                                    <p>If you present <em>usual symptoms</em>,On average, people who are infected start to have symptoms within 5 to 6 days of becoming infected, but it can take up
+                                    to 14.</p>
+                                </div>
+                                <br>
+                                <div class="salud__sugerencias sintomas-menos-comunes">
+                                    <p>If you present <em>less common symptoms</em>,it is recommended that people in good general health confine themselves at home.</p>
+                                </div>
+                            </div>
+                            <br>
+
+                            <h3>If you wish, you can make a particular comment / question:</h3>
+                            <br>
+                            <div class="form-group container-comentario">
+                                <textarea class="comentario__textarea" placeholder="Enter your comment / question ..." name="comment"></textarea>
+                            </div>
+                            <br>
+
+                            <div class="form-group container-submit">
+                                <button type="submit" id="submit">Send form</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>        
+        <footer>
+            <h2 class="copyright" style=" font-family: 'cursive', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             font-size: 25px;
+             color: white;
+    text-shadow: 0px 0px 2px 2px ,yellow;">~Made by Shubhang </h2>
+            <br>All copyright and license© 2021</h5>
+        </footer>
+    </div>
+</body>
+</html>
