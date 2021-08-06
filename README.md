@@ -1,5 +1,5 @@
 
-## 📋  Responsive Web Design: Covid Suvey Form.
+## 📋  Responsive Web Design: Covid Survey Form.
 
 
 
